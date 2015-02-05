@@ -1,10 +1,11 @@
 {
   "in": {
-    "txt": {
+    "es6": {
+      "out": "js",
       "transformers": {
         "name": ".",
         "options": {
-          "errorText": "error"
+          "modules": "umd"
         }
       }
     }
