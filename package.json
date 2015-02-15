@@ -1,15 +1,15 @@
 {
-  "name": "cogs-transformer-6to5",
-  "version": "1.0.1",
+  "name": "cogs-transformer-babel",
+  "version": "1.0.2",
   "author": "Casey Foster <c@sey.me>",
-  "description": "A 6to5 transformer for Cogs.",
+  "description": "A Babel transformer for Cogs.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/caseywebdev/cogs-transformer-6to5"
+    "url": "https://github.com/caseywebdev/cogs-transformer-babel"
   },
   "dependencies": {
-    "6to5": "3.3.12",
+    "babel": "4.0.1",
     "underscore": "1.7.0"
   },
   "devDependencies": {

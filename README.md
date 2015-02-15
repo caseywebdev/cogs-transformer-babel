@@ -1,9 +1,9 @@
-# cogs-transformer-6to5
+# cogs-transformer-babel
 
-A [6to5] transformer for [Cogs].
+A [Babel] transformer for [Cogs].
 
-[![Build Status]](http://travis-ci.org/caseywebdev/cogs-transformer-6to5)
+[![Build Status]](http://travis-ci.org/caseywebdev/cogs-transformer-babel)
 
-[6to5]: https://github.com/6to5/6to5
+[Babel]: https://github.com/babel/babel
 [Cogs]: https://github.com/caseywebdev/cogs
-[Build Status]: https://secure.travis-ci.org/caseywebdev/cogs-transformer-6to5.png
+[Build Status]: https://secure.travis-ci.org/caseywebdev/cogs-transformer-babel.png
