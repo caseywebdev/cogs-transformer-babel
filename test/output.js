@@ -13,7 +13,7 @@
 })(this, function (exports, module, _jquery, _react) {
   'use strict';
 
-  var _interopRequire = function (obj) { return obj && obj.__esModule ? obj['default'] : obj; };
+  function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 
   var _$ = _interopRequire(_jquery);
 
