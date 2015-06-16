@@ -13,21 +13,21 @@
 })(this, function (exports, module, _jquery, _react) {
   'use strict';
 
-  function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-  var _$ = _interopRequire(_jquery);
+  var _$ = _interopRequireDefault(_jquery);
 
-  var _React = _interopRequire(_react);
+  var _React = _interopRequireDefault(_react);
 
   var app = {
     init: function init() {
-      _$('body');
+      (0, _$['default'])('body');
     }
   };
 
-  _$(app.init);
+  (0, _$['default'])(app.init);
 
-  _React.createElement(
+  _React['default'].createElement(
     'div',
     null,
     'foo bar baz'
