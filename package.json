@@ -1,6 +1,6 @@
 {
   "name": "cogs-transformer-babel",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Casey Foster <c@sey.me>",
   "description": "A Babel transformer for Cogs.",
   "license": "MIT",
