@@ -1,11 +1,17 @@
 {
   "in": {
-    "es6": {
-      "out": "js",
+    "js": {
       "transformers": {
         "name": ".",
         "options": {
-          "modules": "umd"
+          "presets": [
+            "es2015",
+            "react",
+            "stage-0"
+          ],
+          "plugins": [
+            "transform-es2015-modules-umd"
+          ]
         }
       }
     }

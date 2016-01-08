@@ -1,6 +1,6 @@
 {
   "name": "cogs-transformer-babel",
-  "version": "1.0.12",
+  "version": "2.0.0",
   "author": "Casey Foster <c@sey.me>",
   "description": "A Babel transformer for Cogs.",
   "license": "MIT",
@@ -9,11 +9,15 @@
     "url": "https://github.com/caseywebdev/cogs-transformer-babel"
   },
   "dependencies": {
-    "babel": "5.8.21",
+    "babel-core": "6.4.0",
     "underscore": "1.8.3"
   },
   "devDependencies": {
-    "cogs-test-helper": "1.0.6"
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babel-plugin-transform-es2015-modules-umd": "6.4.0",
+    "cogs-test-helper": "1.x"
   },
   "scripts": {
     "test": "cogs-test-helper test/test.js"

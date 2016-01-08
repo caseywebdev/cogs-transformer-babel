@@ -1,37 +1,36 @@
 (function (global, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['exports', 'module', 'jquery', 'react'], factory);
-  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-    factory(exports, module, require('jquery'), require('react'));
+  if (typeof define === "function" && define.amd) {
+    define(['exports', 'jquery', 'react'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('jquery'), require('react'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, mod, global.$, global.React);
+    factory(mod.exports, global.jquery, global.react);
     global.input = mod.exports;
   }
-})(this, function (exports, module, _jquery, _react) {
+})(this, function (exports, _jquery, _react) {
   'use strict';
 
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
 
-  var _$ = _interopRequireDefault(_jquery);
+  var _jquery2 = _interopRequireDefault(_jquery);
 
-  var _React = _interopRequireDefault(_react);
+  var _react2 = _interopRequireDefault(_react);
 
-  var app = {
-    init: function init() {
-      (0, _$['default'])('body');
-    }
-  };
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
 
-  (0, _$['default'])(app.init);
-
-  _React['default'].createElement(
-    'div',
-    null,
-    'foo bar baz'
-  );
-
-  module.exports = app;
+  var app = (0, _jquery2.default)(function () {
+    return _react2.default.createElement('div', {
+      id: 'foo'
+    });
+  });
+  exports.default = app;
 });
