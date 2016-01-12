@@ -1,7 +1,7 @@
 var helper = require('cogs-test-helper');
 
 helper.run({
-  'test/config.js': {
+  'test/config.json': {
     'test/input.js': {
       path: 'test/input.js',
       buffer: helper.getFileBuffer('test/output.js'),
