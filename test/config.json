@@ -1,16 +1,13 @@
 {
-  "in": {
-    "js": {
-      "transformers": {
-        "name": ".",
-        "options": {
-          "presets": [
-            "es2015",
-            "react",
-            "stage-0"
-          ]
-        }
-      }
+  "pipe": {
+    "name": ".",
+    "only": "**/*.js",
+    "options": {
+      "presets": [
+        "es2015",
+        "react",
+        "stage-0"
+      ]
     }
   }
 }
