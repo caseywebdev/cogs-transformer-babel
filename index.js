@@ -1,14 +1,15 @@
-var _ = require('underscore');
-var babel = require('babel-core');
+const _ = require('underscore');
+const babel = require('babel-core');
 
-module.exports = function (file, options, cb) {
+module.exports = ({file: {buffer, path}, options}) => {
   try {
-    var source = file.buffer.toString();
-    options = _.extend({filename: file.path}, options);
-    source = babel.transform(source, options).code + '\n';
-    cb(null, {buffer: new Buffer(source)});
+    const source = buffer.toString();
+    options = _.extend({filename: path}, options);
+    return {
+      buffer: Buffer.from(`${babel.transform(source, options).code}\n`)
+    };
   } catch (er) {
-    if (er.codeFrame) er.message += '\n' + er.codeFrame;
-    return cb(er);
+    if (er.codeFrame) er.message += `\n${er.codeFrame}`;
+    throw er;
   }
 };
