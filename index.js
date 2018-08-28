@@ -1,13 +1,15 @@
+const {promisify} = require('util');
 const _ = require('underscore');
-const babel = require('babel-core');
+const babel = require('@babel/core');
 
-module.exports = ({file: {buffer, path}, options}) => {
+const transform = promisify(babel.transform);
+
+module.exports = async ({file: {buffer, path}, options}) => {
   try {
     const source = buffer.toString();
     options = _.extend({filename: path}, options);
-    return {
-      buffer: Buffer.from(`${babel.transform(source, options).code}\n`)
-    };
+    const {code} = await transform(source, options);
+    return {buffer: Buffer.from(`${code}\n`)};
   } catch (er) {
     if (er.codeFrame) er.message += `\n${er.codeFrame}`;
     throw er;

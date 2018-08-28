@@ -1,21 +1,20 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = void 0;
 
-var _jquery = require('jquery');
+var _jquery = _interopRequireDefault(require("jquery"));
 
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
+var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var app = (0, _jquery2.default)(function () {
-  return _react2.default.createElement('div', { id: 'foo' });
+var app = (0, _jquery.default)(function () {
+  return _react.default.createElement("div", {
+    id: "foo"
+  });
 });
-
-exports.default = app;
+var _default = app;
+exports.default = _default;
