@@ -1,9 +1,11 @@
 {
   "name": "cogs-transformer-babel",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "author": "Casey Foster <c@sey.me>",
   "description": "A Babel transformer for Cogs.",
   "license": "MIT",
+  "type": "module",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/caseywebdev/cogs-transformer-babel"
@@ -15,7 +17,7 @@
   "devDependencies": {
     "@babel/preset-env": "7",
     "@babel/preset-react": "7",
-    "cogs-test-helper": "3"
+    "cogs-test-helper": "4"
   },
   "scripts": {
     "test": "cogs-test-helper test/test.js"

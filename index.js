@@ -1,11 +1,13 @@
-const _ = require('underscore');
-const { transformAsync } = require('@babel/core');
+import babel from '@babel/core';
+import _ from 'underscore';
 
-module.exports = async ({ file: { buffer, path }, options }) => {
+const { Buffer } = globalThis;
+
+export default async ({ file: { buffer, path }, options }) => {
   try {
     const source = buffer.toString();
     options = _.extend({ filename: path }, options);
-    const { code } = await transformAsync(source, options);
+    const { code } = await babel.transformAsync(source, options);
     return { buffer: Buffer.from(`${code}\n`) };
   } catch (er) {
     if (er.codeFrame) er.message += `\n${er.codeFrame}`;
